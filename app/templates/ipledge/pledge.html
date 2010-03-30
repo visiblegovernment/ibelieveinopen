@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load mainapp_tags %}
+
+{% block title %}iPledge{% endblock %}
+
+{% block js %}
+     <script type="text/javascript" charset="utf-8" src="{{ MEDIA_URL }}badges.js"></script>    
+{% endblock %}
+
+
+{% block content %}
+
+<div class="textblock">
+{% if msg %}
+    <p class="notice" id="notice">
+    {{ msg }}
+    </p>
+{% else %}
+    <p class="notice" id="notice" style="display: none"></p>
+{% endif %}
+
+<h4>I, {{politician.name}}, candidate for the {{politician.party}} party, pledge that if I am elected I will:</h4>
+<form action="." method="post" accept-charset="utf-8" name="pledges">
+	
+ 
+	<table id="customize-pledge">
+    <tr>
+    <td valign="top">
+	<ul id="pledges">
+	    {% autoescape off %}
+	    {% for pledge in pledges %}
+ 		  {% get_pledgevalue politician pledge as pledge_value %}
+	    <li>
+	        <input type="checkbox" name="{{pledge.code}}" value="1" 
+			{% if pledge_value.supports %}CHECKED{% endif %}
+			/> 
+	        <label  >{{pledge.pledge_text}}
+	            (<a href="#" onclick="$('#pledge-{{pledge.code}}').slideToggle(250); return false;">More Info</a>)
+	            
+	            <span  style="margin-left: 20px;">
+	<a href="#" onclick="$('#comment-{{pledge.code}}').slideToggle(250); return false;"><br>Add a Comment</a></span>
+	          </label>
+	           <div id="comment-{{pledge.code}}" style="display:none;">
+	           	<textarea name="comment-{{pledge.code}}" rows="3" cols="30">{{pledge_value.comments}}</textarea>
+	           </div> 
+	            <div id="pledge-{{pledge.code}}" style="display:none" class="pledge-info">
+	                <p>{{pledge.description}}</p>
+	            </div>
+	            {% for option in pledge.pledgeoption_set.all %} 
+	                {% ifequal option.option_type "candidate" %}
+	                    <div id="pledge-{{pledge.code}}-options" style="display:none" class="pledge-option">
+	                        {{ option.form_html }}  
+	                    </div>
+	                {% endifequal %}
+	            {% endfor %}
+		    </li>
+		    
+	    {% endfor %}
+	    {% endautoescape %}                
+	  <li><hr/></li>
+	</ul><ul>
+		<li>
+	    <input type="checkbox" name="no" value="1" 
+		{%if politician.support_none %}CHECKED{% endif %}
+		/>
+	    <label> I <b>do not</b> support any reforms above</label>
+	  </li>
+	</ul>
+	<input type="submit" name="submit" value="Submit" style="margin-top: 20px; margin-left: 30px; margin-bottom: 30px;"/>
+</form>
+</td>
+ <td width=200 valign="middle" align="center">
+        <img class="stars" src="/media/images/ibelieve-badge-3-0.png" width="150px" height="76px" alt="I Believe In Open Badge"/>
+</td>
+
+</tr>
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+Hello!
+
+We notice that you haven't confirmed the email address you gave when you signed up to 
+ibelieveinopen.ca.  Perhaps our first email never reached you.  Just in case, we're
+resending your confirmation link, below.  Please confirm your email address to be 
+counted in 'I Believe In Open'.
+
+To confirm this email is correct, go to:
+{{activate_url}} 
+
+Thanks,
+ibelieveinopen.ca Support
+
+Not sure what this email is about?  Please report abuse to ibelieve@visiblegovernment.ca
+
+

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Enter Your Postal Code{% endblock %}
+{% block content %}
+{% load i18n %} 
+
+{% include "results/subnav.html" %} 
+
+<div class="textblock">
+	<table width=100% align=center >
+	<tr>
+	<td align=center >
+	<div class="search">
+	<h6>{% trans "Search for results in your riding:" %}</h6>
+	{% include "results/_postalcode_form.html" %} 
+	</div>
+	</td>
+	</tr>
+	<tr>
+	<td align=center>{% trans "Or, find a riding by province" %}:<br> 
+	{% for abbrev in provinces %}
+		<span padding: 5px;"><a href="/results/province/{{abbrev}}/">{{abbrev}}</a></span>
+	{% endfor %}
+	</ul>
+	</td>
+	</tr>
+	</table>
+</div>
+{% endblock %}

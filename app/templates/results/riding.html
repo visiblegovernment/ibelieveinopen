@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Results for Riding{% endblock %}
+{% block content %}
+{% include "results/subnav.html" %}
+
+<div class="textblock">
+
+<h6>{% trans "Campaign Results for Riding" %} : {{ riding.name }}</h6>
+<p>
+{% include "results/_response_summary.html" %}
+
+<h6>{% trans "MPs Pledge" %}</h6>
+{% include "results/_politician_index.html" %}
+
+</div>
+{% endblock %}

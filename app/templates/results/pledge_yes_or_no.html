@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Campaign Results{% endblock %}
+{% block js %}
+<script src="{{MEDIA_URL}}jquery.tablesorter.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="{{MEDIA_URL}}blue/style.css" type="text/css" media="screen" title="jquery.Tablesorter theme(Blue)">
+<style type="text/css" media="screen">
+
+.comments {  padding: 12px; background: #ffffff; font-size: 12px; }
+.comments .sbl { background: url('/media/images/bl.gif') bottom left no-repeat #EDEDED; width: 90%; text-align: center; min-width: 100px; }
+.comments .sbr { background: url('/media/images/br.gif') bottom right no-repeat; }
+.comments .stl { background: url('/media/images/tl.gif') top left no-repeat; }
+.comments .str { background: url('/media/images/tr.gif') top right no-repeat; padding: 10px; }
+.comments .sb { color: #666; font-size: 12px; padding: 2px 0px 10px 50px; background: url('/media/images/b.gif') 30px top no-repeat; }
+</style>
+
+<script type="application/x-javascript">
+$(document).ready(function() {
+  $("#tblPledges").tablesorter({sortList: [[1,0]]} );
+  $(".hs").click(function () {
+      update($("span:first"));
+    });
+
+        }
+    );
+    </script>
+{% endblock %}
+{% block content %}
+{% include "results/subnav.html" %}
+
+<h6>
+	{% ifequal response "Yes" %}
+	{% trans "MPs Who Agreed To Pledge" %}
+	{% else %}
+	{% trans "MPs Who Did Not Agree To Pledge" %}
+	{% endifequal %}
+	#{{pledge.id}}:
+</h6>
+<p style="text-align:center;">{{pledge.pledge_text}}	(<a href="#" onclick="$('#pledge-{{result.pledge.code}}').slideToggle(250); return false;">?</a>)
+                    <div id="pledge-{{result.pledge.code}}" style="display:none" class="pledge-info">
+                            <p>{{pledge.description}}</p>
+                    </div>
+</p>
+
+<table width="60%" class="tablesorter" id="tblPledges">
+  <thead>
+    <th>{% trans "Name" %}</th>
+    <th>{% trans "Party" %}</th>
+    <th>{% trans "Province" %}</th>
+    <th>{% trans "Riding" %}</th>
+    </thead>
+    <tbody>
+      {% for c in candidates %}
+       <tr>
+         <td width="30%"><a href="{{c.get_absolute_url}}">{{c.name}}</a></td>
+		 <td>{{c.party}}</td>
+		<td>{{c.province}}</td>
+		<td><a href="/results/riding/{{c.riding_id.edid}}">{{c.riding_id.name}}</a></td>
+	  </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+<div class="comments" style="margin-top:40px;">
+{% for comment in comments %}
+ <div class="sbl"><div class="sbr"><div class="stl"><div class="str">{{comment.comments}}</div></div></div></div>
+ <div class="sb"><a href="{{comment.politician.get_absolute_url}}">{{comment.politician.name}} ({{comment.politician.party}})</a></div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Review Comments{% endblock %}
+
+{% block js %}
+    <script src="{{MEDIA_URL}}jquery.tablesorter.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="{{MEDIA_URL}}blue/style.css"
+          type="text/css" media="screen" title="jquery.Tablesorter theme(Blue)">
+<script type="application/x-javascript">
+$(document).ready(function() { 
+  $("#tblComments").tablesorter({sortList: [[3,1]], widgets:['zebra']} );
+  $(".hs").click(function () {
+      update($("span:first"));
+    });
+
+        } 
+    ); 
+    </script>
+{% endblock %}
+
+{% block content %}
+<h2>Reviewing 
+{% if review_public %}Public{% else %}Flagged{%endif%} Comments </h2>
+
+<ul><li>
+{% if review_public %}
+You are reviewing Publicly visible comments. 
+<a href="/blog/review_flagged/">Review Flagged Comments.</a>
+{% else %}
+You are reviewing Comments flagged as spam by the system. 
+<a href="/blog/review_public/">Review Public Comments</a>
+{% endif %}
+</li>
+<li>
+<em>Note: Click on
+{% if review_public %}
+"Spam" link to flag the message.
+{% else %}
+"Not spam" link to make the message public
+{% endif %}
+</em>
+</li>
+<li>
+  <a href="?o=0">&laquo;Home</a> |
+  <a href="?o={{prev}}">Prev</a> |
+  <a href="?o={{next}}">Next</a> |
+  <a href="?o={{last}}">Last&raquo;</a> 
+
+</li>
+</ul>
+<table width="100%" class="tablesorter" id="tblComments"> 
+  <thead>
+    <th>Ham/Spam</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Date</th>
+    <th>Comment</th>
+    </thead>
+    <tbody>
+      {% for c in comments %}
+       <tr>
+         <td>
+	   {% if review_public %}
+	   <a href="/blog/hidec/{{c.id}}/1/">Spam</a>
+	   {% else %}
+	   <a href="/blog/hidec/{{c.id}}/0/">Not spam</a></td>
+	   {% endif %}
+
+	 <td>{{c.name}}</td>
+	 <td>{{c.email}}</td>
+	 <td>{{c.created_at|date:"d.M.y"}}</td>
+	 <td>{{c.comment|truncatewords_html:10}}</td>
+       </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+{% endblock %}

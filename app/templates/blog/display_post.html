@@ -1,0 +1,26 @@
+{% load blog_tags %}
+
+<div class="post">
+<h3><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
+{% if post.author.first_name and post.author.last_name %}
+    <small>{{post.created_at|date:"F d, Y h:i a"}} by <a href="/blog/author/{{post.author.username}}">{{post.author.first_name}} {{post.author.last_name}}</a></small>
+{% else %}
+    <small>{{post.created_at|date:"F d, Y h:i a"}} by <a href="/blog/author/{{post.author.username}}">{{post.author.username}}</a></small>
+
+{% endif %}
+{% autoescape off %}
+<div class="post-content">
+{% if excerpt %}
+{{post.excerpt}}
+<p>
+    <a href="{{post.get_absolute_url}}">Read more...</a>
+</p>
+{% else %}
+{{post.content}}
+{% endif %}
+</div>
+{% endautoescape %}
+<div class="post-info">
+Categories: {% for tag in post.get_tags %}<a href="/blog/tag/{{tag.slug}}/">{{tag.name|capfirst}}</a> {% endfor %} | <a href="{{post.get_absolute_url}}#comments">Comments ({{post.comment_set.all|length}})</a>
+</div>
+</div>

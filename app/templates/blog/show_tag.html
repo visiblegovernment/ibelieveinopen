@@ -1,0 +1,18 @@
+{% extends "blog_base.html" %}
+{% block subnav %}
+{# <ul id="subnav" class="clearfix"> #}
+{#  <li class="selected"><a href="/blog/">Home</a></li> #}
+{# </ul> #}
+{% endblock%}
+
+{% load blog_tags %}
+
+{% block content %}
+<h2>Posts in the "{{tag.name}}" Category:</h2>
+{% for post in posts %}
+
+{% include "blog/display_post.html" %}
+
+{% endfor %}
+
+{% endblock %}

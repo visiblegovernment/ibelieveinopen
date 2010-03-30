@@ -1,0 +1,15 @@
+Hello!
+
+You have given this as your email address when joining ibelieveinopen.ca.
+
+To confirm this email is correct, go to:
+{{activate_url}} 
+
+You will not be counted in our statistics until you have confirmed your email.  
+
+Thanks,
+ibelieveinopen.ca Support
+
+Not sure what this email is about?  Please report abuse to ibelieve@visiblegovernment.ca
+
+

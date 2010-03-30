@@ -1,0 +1,30 @@
+Dear {{politician.fname}} {{politician.lname}},
+
+{{voter_count}} voters in the riding of: {{politician.riding_id.name}}, {{politician.riding_id.province}}
+encourage you to take a stand for greater transparency in Canada's
+federal government at http://ibelieveinopen.ca.
+
+Voters in your riding believe that politicians should:
+
+{% for result in voter_result %}{{result.pledge.id}}: {{result.pledge.pledge_text|wordwrap:65 }}
+    - {{result.yes_total}}/{{voter_count}} voters support this pledge
+{% endfor %}
+
+The most recent people to sign up in your riding are:
+{% for voter in voters %}- {{voter.name}}
+{% endfor %}
+
+Please take a few minutes to fill out our pledge to show your
+constituents where you stand.  Voters in your riding who have
+signed up to ibelieveinopen.ca will be notified by email of your
+response by email within 24 hours.
+
+You can make your pledge by following this link:
+{{url}}
+Passcode: {{passcode}}
+
+If you have any questions, please contact Jennifer Bell,
+VisibleGovernment.ca's Executive Director, at 514-513-0475
+or jennifer@visiblegovernment.ca.
+
+Jennifer Bell

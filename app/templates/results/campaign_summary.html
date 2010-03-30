@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Politician's Responses{% endblock %}
+{% block content %}
+{% include "results/subnav.html" %}
+
+<style type="text/css" media="screen">
+
+    label {
+    	font-weight: bold;
+    	font-size: 12px;
+    	color:  #4a668d;
+    }
+
+    .data {
+
+    }
+
+	.pledge_comment_info {
+		padding-top: 12px;
+	}
+
+	.response-yes {
+		font-size: 12px;
+		color: #009900;
+		text-align: center;
+	}
+
+	.response-no {
+		font-size: 12px;
+		color: #990000;
+		text-align: center;
+	}
+
+	td { padding: 5px }
+
+
+	tr.pledgetop {
+		border-top-style: solid;
+		border-width: 3px;
+		border-color: #eeeeee;
+	}
+
+	tr.pledgebottom {
+		border-bottom-style: solid;
+		border-width: 3px;
+		border-color: #eeeeee;
+	}
+
+	p#congrats {
+		text-align: center;
+		font-size: 14px;
+		color:#666;
+		font-style: italic;
+	}
+
+</style>
+
+
+<div class="textblock">
+<h6>{% trans "National Campaign Results" %}</h6>
+<p id="congrats">{% trans "We warmly congratulate all MPs who have taken the transparency pledge." %}</p>
+
+{% include "results/_response_summary.html" %}
+</div>
+{% endblock %}

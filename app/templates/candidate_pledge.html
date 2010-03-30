@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}MP Pledge {% endblock %}
+{% block subnav %}
+    <ul id="subnav" class="clearfix">
+      <li ><a href="/pledge/citizen/">{% trans "Citizens Pledge" %}</a></li>
+	  <li class="selected"><a href="/pledge/candidate/">{% trans "MP Pledge" %}</a></li>
+   </ul>
+{% endblock %}
+
+
+{% block content %}
+<div class="textblock">
+{% blocktrans %}
+<p>If you have received a login URL+passcode combination from an email from the I Believe in Open campaign, please use that to express
+	your support.</p>
+<p><a href="mailto:ibelieve@visiblegovernment.ca">Email us</a> to receive the passcode.</p>
+{% endblocktrans %}
+</div>
+{% endblock %}

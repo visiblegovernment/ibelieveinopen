@@ -1,0 +1,88 @@
+{% extends "blog_base.html" %}
+
+{% load blog_tags %}
+
+{% block content %}
+{% if msg %}
+<p class="notice">{{msg}}</p>    
+{% endif %}
+{% if form.errors %}
+<p class="notice" style="border: 1px solid red; background-color: #cc7575">There was an error adding your comment.</p>
+{% endif %}
+    
+</div>
+<div class="post">
+<h5>{{post.title}}</h5>
+{% if post.author.first_name and post.author.last_name %}
+    <small>{{post.created_at|date:"F d, Y h:i a"}} by <a href="/blog/author/{{post.author.username}}">{{post.author.first_name}} {{post.author.last_name}}</a></small>
+{% else %}
+    <small>{{post.created_at|date:"F d, Y h:i a"}} by <a href="/blog/author/{{post.author.username}}">{{post.author.username}}</a></small>
+
+{% endif %}
+
+<div class="post-content">
+{% autoescape off %}
+{{post.content}}
+{% endautoescape %}
+</div>
+<div class="post-info">
+Categories:
+{% for tag in post.get_tags %}
+<a href="/blog/tag/{{tag.slug}}/">{{tag.name}}</a> 
+{% endfor %}
+ | <a href="{{post.get_absolute_url}}">Permalink</a>
+</div>
+</div>
+{% autoescape off %}
+<div id="comments">
+<h3>Comments ({{post.public_comments|length}})</h3>
+{% if not post.public_comments %}
+    <p>No comments yet. Why don't you add one?</p>
+{% else %}
+    <table id="comments">
+    {% for comment in post.public_comments %}
+      {% if comment.is_public %}
+        <tr>
+            <td class="{% cycle 'odd' 'even'%}">
+                <div id="comment-{{comment.id}}">
+                <div class="comment-header">
+                {% if comment.website %}
+                    <a href="{{comment.website}}" rel="nofollow">{{comment.name}}</a>:
+                {% else %}
+                    {{comment.name}}:
+                {% endif %}
+
+                <div class="comment-date">
+                    <a href="{{post.get_absolute_url}}#comment-{{comment.id}}">
+                    {{comment.created_at|date:"F j, Y"}}
+                    {{comment.created_at|date:"h:i A"}}
+                    </a>
+                </div>
+                </div>
+                <div class="comment">
+                {{comment.comment}}
+                </div>
+                </div>
+            </td>
+         </tr>
+       {% endif %}	
+    {% endfor %}
+    </table>
+{% endif %}
+</div>
+{% endautoescape %}
+
+<h3 style="margin-bottom: 10px">Add A Comment</h3>
+<form action="{{post.get_absolute_url}}" method="post">
+<table class="form">
+{{form.as_table}}
+<tr>
+    <th></th>
+    <td>
+        <input type="submit" name="submit" value="Add Comment" id="submit">
+    </td>
+</tr>
+</table>
+</form>
+{% endblock %}
+

@@ -1,0 +1,44 @@
+Une version ***  suit
+************************************************************
+
+Dear {{voter.name}},
+
+{{politician.fname}} {{politician.lname}} has responded to
+the 'I Believe in Open' challenge.
+
+You may view your MP's response here:
+{{rep_link}}
+
+Thank you for support.
+ibelieveinopen.ca
+
+-----
+If you no longer wish to receive emails from 'I Believe in
+Open', click the link below.
+{{unsubscribe}}
+
+If you no longer support 'I Believe in Open', and wish to
+be removed from our records, please send an email to:
+remove_me_from_ibelieve@visiblegovernment.ca
+
+************************************************************
+
+Bonjour {{voter.name}},
+
+{{politician.fname}} {{politician.lname}} has responded to
+the 'I Believe in Open' challenge.
+
+You may view your MP's response here:
+{{rep_link}}
+
+Thank you for support.
+ibelieveinopen.ca
+
+-----
+If you no longer wish to receive emails from 'I Believe in
+Open', click the link below.
+{{unsubscribe}}
+
+If you no longer support 'I Believe in Open', and wish to
+be removed from our records, please send an email to:
+remove_me_from_ibelieve@visiblegovernment.ca

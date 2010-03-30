@@ -1,0 +1,53 @@
+{% comment %}
+{% block css %}
+<style type="text/css">
+#navbar ul{
+    padding: 0;
+    margin-left: 0;
+}
+#navbar ul li {
+    margin-right: 0px;
+    padding: 10px 19px;
+
+}
+
+</style>
+
+{% endblock %}
+{% endcomment %}
+{% load i18n %} 
+
+<ul>                
+    {% ifequal page "home" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endifequal %}
+          <a href="/" class="home">{% trans "HOME" %}</a>
+        </li>
+
+    {% ifequal page "pledge" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endifequal %}
+          <a href="/pledge/" class="parent">{% trans "PLEDGE" %}</a>
+ 
+   </li>                     
+
+  {% ifequal page "results" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endifequal %}
+          <a href="/results/politicians/" class="parent">{% trans "RESULTS" %}</a>
+   </li>                     
+
+    {% ifequal page "about" %}
+    <li class="selected">
+    {% else %}
+    <li>
+    {% endifequal %}
+          <a href="/about/" class="about">{% trans "ABOUT" %}</a>
+    </li>          
+</ul>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %} 
+
+{% block title %}Select Riding{% endblock %}
+{% block content %}
+{% include "results/subnav.html" %} 
+
+<div class="textblock">
+	<h2>{% trans "Select Riding" %}</h2>
+	<p>{% trans "That postal code is not yet in our database.  Please choose a riding from your province.  If you don't know your riding, you can look it up" %} <a href="http://www.elections.ca/scripts/PSS/FindED.aspx?L=e">{% trans "here" %}</a>:</p>
+{% include "results/_riding_table.html" %} 
+</div>
+{% endblock %}

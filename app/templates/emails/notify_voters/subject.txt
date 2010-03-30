@@ -1,0 +1,1 @@
+ibelievinopen.ca: {{politician.fname}} {{politician.lname}} ({{politician.party}}) has taken the pledge

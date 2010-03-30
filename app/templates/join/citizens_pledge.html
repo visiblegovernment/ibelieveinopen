@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% block title %}Citizen's Pledge {% endblock %}
+{% load i18n %}
+{% block css %}
+<style type="text/css" media="screen">
+    #join-us-submit {
+      border: 2px solid #ffcc00;
+      background-color: #fff3ac;
+      margin-left: 30px;
+      padding: 10px 20px;
+      color: #333;
+      font-size: 18px;
+      width: 450px;
+      text-align: center;
+    }
+
+    #join_text {
+    	font-size: 18px;
+    }
+
+    #error_msg {
+    	font-size:10px;
+    	background-color: #ffeeee;
+    }
+
+    #send_summary_explanation {
+#      border: 1px solid #222222;
+       font-style: italic;
+       color: #555;
+       font-size: 12px;
+       margin-top:4px;
+#      text-align: center;
+    }
+</style>
+
+{% endblock %}
+
+{% block subnav %}
+    <ul id="subnav" class="clearfix">
+        <li class="selected"><a href="/pledge/citizen/">Citizens Pledge</a></li>
+        <li><a href="/pledge/candidate/">MP Pledge</a></li>
+    </ul>
+{% endblock %}
+
+
+{% block js %}
+     <script type="text/javascript" charset="utf-8" src="{{ MEDIA_URL }}badges.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="textblock">
+
+<div id = "join_text">
+	{% trans "Join the I Believe in Open Campaign.  Enter your name and email, and select the aspects of government transparency you support." %}</p>
+</div>
+<div id="send_summary_explanation">
+	{% trans "We will send your MP a summary of our results for every 25 voters in your riding who sign up."%}
+</div>
+
+<p>
+     <form name="join_us" action="/join/submit/html/" onsubmit="if (validatePostalcode(document.join_us.postalcode.value)){$('#pcode_error').hide(250);} else {$('#pcode_error').show(250); return false; }" id="join_us" method="post">
+
+        <table>
+        	<tr><td><h4>{% trans "I," %}</h4></td>
+        		<td>
+        			<table>
+        				<tr>
+            				<td> <label>{% trans "Name:" %}</label></td>
+        				</tr>
+        				<tr>
+            				<td> <input type="text" name="name" value="" id="name" class="text" style="width: 200px" /></td>
+        				</tr>
+        			</table>
+        		</td>
+        		<td><h4>{% trans "believe MPs should:" %}</h4></td>
+        	</tr>
+        </table>
+	<table id="customize-pledge">
+    <tr>
+    <td valign="top">
+           <ul id="pledges">
+                {% autoescape off %}
+                {% for pledge in pledges %}
+
+                <li>
+                    <input type="checkbox" name="{{pledge.code}}" value="1" class="update" />
+                    <label>{{pledge.pledge_text}}
+                        (<a href="#" onclick="$('#pledge-{{pledge.code}}').slideToggle(250); return false;">?</a>)
+                        </label>
+                        <div id="pledge-{{pledge.code}}" style="display:none" class="pledge-info">
+                            <p>{{pledge.description}}</p>
+                        </div>
+                        {% for option in pledge.pledgeoption_set.all %}
+                           {% ifequal option.option_type "citizen" %}
+                            <div id="pledge-{{pledge.code}}-options" style="display:none" class="pledge-option">
+                                {{ option.form_html }}
+                            </div>
+                            {% endifequal %}
+                        {% endfor %}
+                </li>
+
+                {% endfor %}
+                {% endautoescape %}
+
+            </ul>
+    </td>
+       	    <td width=190 valign="middle" align="center">
+{% get_current_language as LANGUAGE_CODE %}
+        <img class="stars" src="/media/images/ibelieve-badge-{{LANGUAGE_CODE}}-3-0.png" width="150px" height="76px" alt="I Believe In Open Badge"/>
+        <br>
+        <label style="font-size: 10px;" >
+        <a href="#" onclick="$('#pledge-code-embed-slidedown').slideToggle(250); return false;">{% trans "Get embed code for this image" %}</a>
+        </label>
+        <div id="pledge-code-embed-slidedown" style="display:none">
+             <table align=center>
+				<tr>
+					<td>
+						<label style="font-size: 10px;" >{% trans "Cut and paste this code to your website:" %}</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+ 						<form>
+ 						<textarea cols="22" rows="5" id="badge_embed"><a href="http://ibelieveinopen.ca"><img src="http://images.ibelieveinopen.ca/media/images/ibelieve-badge-{{LANGUAGE_CODE}}-3-0.png" alt="I Believe in Open Badge" /></a></textarea>
+ 						</form>
+ 					</td>
+ 				</tr>
+ 			</table>
+        </div>
+    	</td>
+
+    </tr>
+    </table>
+
+    <p style="margin-bottom: 15px; font-size: 18px">{% trans "Enter your email address* and postal code:" %}</p>
+        <table id="join-us">
+        <tr>
+            <td><label>{% trans "Email:" %}</label></td>
+            <td><label>{% trans "Postal Code:" %}</label></td>
+            <td></td>
+        </tr>
+        <tr>
+        	<div  id="pcode_error" style="display:none; margin-bottom:0px; margin-top:0px;">
+        	<p id="error_msg">{% trans "Please enter a valid postal code." %}</p>
+        	</div>
+        </tr>
+        <tr>
+        <td>
+        <input type="text" name="email" value="" id="email" class="text" style="width: 200px" /></td>
+        <td><input type="text" name="postalcode" value="" id="postalcode2" class="text" style="width: 75px" /></td>
+        <td><input type="submit" name="submit" value="Submit" id="submit2" /></td>
+
+        </tr>
+        </table>
+    </form>
+
+    <p style="font-size: 12px; margin-top:60px;">* {% blocktrans %} <b>Your email will not be published</b>, and will not be shared with other parties.  See our <a href="/about/privacy.html">Privacy Policy</a> for more information.</p>
+    {% endblocktrans %}
+
+</div>
+{% endblock %}
+

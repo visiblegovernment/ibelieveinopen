@@ -1,0 +1,284 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% load i18n %}
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<style type="text/css" media="screen">
+    #left_panel {
+        float: left;
+        width: 38%;
+    }
+
+
+    #right_panel {
+    	float: right;
+    	width: 60%;
+    }
+
+    label {
+    	font-weight: bold;
+    	font-size: 14px;
+    	color:  #4a668d;
+    }
+
+    #take_pledge {
+    	height: 170px;
+    	width: 100%;
+    }
+
+	#total {
+		height: 170px;
+	}
+
+    #take_pledge p {
+    	font-size: 14px;
+    	margin-bottom: 5px;
+    }
+
+    #new_candidates {
+        height: 250px ;
+        width:100%;
+    }
+
+    #top_provinces {
+    	height: 250px;
+    }
+
+    #new_voters {
+        width:100%;
+        height: 600px;
+    }
+
+    #candidate_summary{
+         height: 200px;
+    }
+
+    #voter_summary {
+    	height: 600px;
+     }
+
+    .titlebar {
+    	padding-left: 20px;
+		color: #FFFFFF;
+		font-family: Helvetica, Arial, sans-serif;
+    	font-weight: bold;
+    	font-size: 110%;
+		background:#303030 url(/media/images/title-l.png) no-repeat;
+		margins: 20px;
+	}
+
+	.titlebar div {
+		background: url(/media/images/title-r.png) no-repeat top right;
+	}
+
+	.titlebar span {
+		width: 100%
+		text-align: right;
+	}
+
+	.button {
+		width : 141px;
+		height : 40px;
+		background-image : url(/media/images/button_normal.png);
+		background-repeat : no-repeat;
+		text-align: center;
+	}
+
+	.button a {
+		font-size : 18px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #FFFFFF;
+		line-height: 35px;
+
+	}
+
+	.button:hover {
+		background-image : url(/media/images/button_hover.png);
+		background-repeat : no-repeat;
+	}
+
+
+	span.explain_link {
+		padding-left: 20px;
+	}
+
+	span.explain_link a {
+		color:  #8daada;
+		border-bottom: 1px solid;
+		border-color: #8daada;
+		font-weight: normal;
+		font-size:80%
+	}
+
+	.summary {
+		padding-left: 20px;
+		padding-top: 5px;
+	}
+
+
+	#total .countnumber {
+		background-color: #f7f7f7;
+		color: #4a66ff;
+		margin-top: 20px;
+		padding: 0px;
+		border: 2px solid #ccc;
+		border-top-color: #eee;
+		border-right-color: #ddd;
+		border-left-bottom-color: #bbb;
+		height: 60px;
+		font-weight: bold;
+		font-size: 40px;
+		text-align: center;
+	}
+
+	#total .counttext {
+		text-align: center;
+	}
+
+	#total #total-left {
+		width: 40%;
+		margin-left:20px;
+		float: left;
+	 }
+
+	#total #total-right {
+		width: 40%;
+		float: right;
+		margin-right: 20px;
+	 }
+
+
+</style>
+<div>
+<div id = "left_panel" >
+	<div id="total">
+		<div class="titlebar"><div>{% trans "Totals" %}</div></div>
+		<div id="total-left">
+			<div class="countnumber">{{voter_total}}</div>
+			<div class="counttext"><label>{% trans "Voter Signups" %}</label></div>
+		</div>
+		<div id="total-right">
+			<div class="countnumber">{{candidate_total}}</div>
+			<div class="counttext"><label>{% trans "MP Pledges" %}</label></div>
+		</div>
+	</div>
+	<div id="new_candidates">
+
+		<div class="titlebar"><div>{% trans "New MP Pledges" %}</div></div>
+		<div  class="summary">
+			{% if received_candidate_pledge  %}
+			<dl class="pledges">
+			{% for can in recent_cand_pledges %}
+			<dt>
+				<a href="{{can.get_absolute_url}}">{{can.fname}} {{can.lname}} ({{can.party}})</a>
+			</dt>
+			<dd>{{can.created_at|date:"F j, Y"}}&#8212; {{can.province}}-{{can.riding_id.name}}, </dd>
+			{% endfor%}
+		</dl>
+		{% else %}
+		<dl class="pledges"><dt>No pledges received yet.</dt></dl>
+		{% endif %}
+		</div>
+	</div>
+	<div id="new_voters">
+		<div class="titlebar"><div>{% trans "New Voter Signups" %}</div></div>
+			<div  class="summary">
+			<dl class="pledges">
+				{% for voter in recent_voter_pledges %}
+				<dt>
+					{{voter.name}}
+				</dt>
+				<dd>{{voter.created_at|date:"F j Y"}} &#8212; {{voter.riding.province}}-{{voter.riding.name}}  </dd>
+				{% endfor%}
+			</dl>
+		</div>
+	</div>
+
+</div>
+
+</div>
+<div id="right_panel">
+<div id="take_pledge">
+	<div class="titlebar"><div>{% trans "About" %}</div></div>
+	<div  class="summary" height=100%>
+		<p>{% trans "I Believe In Open is a national movement challenging politicians to commit to <br><a href='/about'> five key improvements<a/> in government transparency." %}</p>
+		<p>{% trans "Would you like to see a more open and transparent federal government?" %}</p>
+		<div style="float:right; padding-right:40px;" class="button" ><a href="/pledge/" align=right valign=bottom>{% trans "JOIN US" %}</a></div>
+	</div>
+</div>
+
+<div id="voter_summary" >
+	<div id="top_provinces" >
+	<div class="titlebar">
+		<div>
+			{% trans "Top Provinces Where Voters Believe in Open" %}
+		</div>
+	</div>
+	<div class="summary">
+	<table width=100%>
+    <tr>
+    	<td width=66%><label>{% trans "Province"%}</label></td>
+    	<td><label>{% trans "Voter Signups" %}</label></td>
+    </tr>
+{% for province in provinces %}
+	<tr>
+       <td>{{province.name}}</td>
+       <td>{{province.count}}</td>
+    </tr>
+{% endfor %}
+    </tr>
+</table>
+<p>
+	</div>
+	</div>
+	<div class="titlebar">
+		<div>
+			{% trans "Top Ridings Where Voters Believe in Open" %}
+		</div>
+	</div>
+	<div class="summary">
+
+	<table table width=100%>
+    	<tr>
+    		<td width=66%><label>{% trans "Riding" %}</label></td>
+    		<td><label>{% trans "Voter Signups" %}</label></td>
+    	</tr>
+{% for riding in ridings %}
+		<tr>
+       		<td ><a href="/results/riding/{{riding.other}}">{{ riding.name }}</a></td>
+    		<td>{{riding.count}}</td>
+    	</tr>
+{% endfor %}
+    	</tr>
+	</table>
+	</div>
+</div>
+<div id="candidate_summary">
+	<div class = "titlebar">
+		<div>
+			{% trans "Parties that Believe in Open" %}
+		</div>
+	</div>
+	<div class = "summary">
+	<table width=100%>
+		<tr>
+       		<td width=66%><label>{% trans "Party" %}</label></td>
+       		<td><label>{% trans "MP Pledges" %}</label></td>
+    	</tr>
+
+		{% for party in parties %}
+    	<tr>
+       		<td >{{ party.name }}</td>
+       		<td>{{party.count}}</td>
+    	</tr>
+		{% endfor %}
+	</table>
+
+	</div>
+</div>
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load mainapp_tags %}
+
+{% block title %}Issues supported by {{politician.name}}{% endblock %}
+{% block css %}
+<div>
+<style type="text/css" media="screen">
+	dt.pledge-desc{
+		color:#333;
+		margin-top:1em;
+	}
+</style>
+{% endblock %}
+{% block content %}
+{% if msg %}
+    <p class="notice" id="notice">
+    {{ msg }}
+    </p>
+{% else %}
+    <p class="notice" id="notice" style="display: none"></p>
+{% endif %}
+
+    <style type="text/css" media="screen">
+        #content h3 {
+            margin-bottom: 10px;
+        }
+
+        table#candidate_info {
+            font-size: 20px;
+            margin-left: 70px;
+           margin-bottom: 30px;
+        }
+        table#candidate_info td {
+            padding-right: 60px;
+        }
+    </style>
+
+    <table id="candidate_info">
+       <tr>
+            <td colspan="4" style="text-align: left; padding-top: 20px;">
+            	 <h4>MP:</h4>
+ 			</td>
+ 		</tr>
+        <tr style="color: #000; font-weight: bold">
+            <td>Name:</td>
+            <td>Province:</td>
+            <td>Riding:</td>
+            <td>Party:</td>
+        </tr>
+        <tr style="color: #333;">
+            <td style="text-align: left">{{politician.name}}</td>
+            <td>{{politician.province}}</td>
+            <td><a href="/results/riding/{{politician.riding_id.edid}}/">{{politician.riding_id.name}}</a></td>
+            <td>{{politician.party}}</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: left; padding-top: 20px;">
+            {% if politician.ipledge_has_responded %}
+			<h4>has pledged to:</h4>
+			<form method="post" accept-charset="utf-8">
+			<dl id="pledges">
+	    	{% autoescape off %}
+	    	{% for pledge in pledges %}
+ 		  	{% get_pledgevalue politician pledge as pledge_value %}
+	    		<dt class="pledge-desc">
+
+			{% if pledge_value.supports %}
+			<img src="/media/images/icon-yes.gif" align="bottom" />
+			{%else %}
+			<img src="/media/images/icon-no.gif" align="bottom" />
+			{% endif %}{{pledge.pledge_text}}
+	            (<a href="#" onclick="$('#pledge-{{pledge.code}}').slideToggle(250); return false;">?</a>)
+	        </dt>
+	            <div id="pledge-{{pledge.code}}" style="display:none" class="pledge-info">
+	                <p>{{pledge.description}}</p>
+	            </div>
+	         {% if pledge_value.comments %}
+	        <div class="comments">
+	        	<div class="sbl"><div class="sbr"><div class="stl"><div class="str">{{pledge_value.comments}}</div></div></div></div>
+				<div class="sb"></div>
+			</div>
+			{% endif %}
+	    	</dd>
+	    	</dl>
+	    {% endfor %}
+	    {% endautoescape %}
+	</dl>
+
+	{%if politician.support_none %}
+	<dl>
+		<dt>{{politician.name}} <b>does not</b> support any of the reforms</dt>
+	</dl>
+	{% endif %}
+	</form>
+	{% else %}
+ 	<p>has yet to respond to our campaign.</p>
+	{% endif %}
+
+    </td>
+</tr>
+</table>
+</div>
+
+{% endblock %}

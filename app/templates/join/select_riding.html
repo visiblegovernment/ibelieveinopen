@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Select Riding{% endblock %}
+{% load i18n %} 
+<style type="text/css" media="screen">
+ tr.even {
+ 	background-color: #ddd;
+ }
+</style>
+{% block content %}
+<div class="textblock">
+	{% blocktrans %}
+	<h2>What Riding Are You From?</h2>
+	<p>You're the first citizen from your postal code to take our pledge! </p>
+	<p>We've refused to pay the <a href="http://www.statcan.ca/bsolc/english/bsolc?catno=92F0193U">high fees</a> the federal government charges for the information that would allow us map a postal code to an electoral disctrict.  (A perfect example of government data we believe should be free.)</p>
+	<p>Please help us add to our database by choosing one of the following ridings that match your postal code.  If you don't know, you can look it up <a href="http://www.elections.ca/scripts/PSS/FindED.aspx?L=e">here</a>:</p>
+	{% endblocktrans %}
+	<form action="/join/select_riding/{{voter.id}}/" method="POST"  >
+		<table widht=100%>			
+	{% for riding1 in ridings %}
+			<tr>
+				<td style="valign=middle;" width=100><input type="radio" name="edid" value="{{riding1.edid}}"></td>
+				<td style="valign=middle;">{{riding1.name}}</td>
+			</tr>		
+	{% endfor %} 
+	</table>
+	<p>
+	<input type="submit" name="submit" value="Next" id="submit" />
+	</form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+Dear {{politician.fname}} {{politician.lname}},
+
+Hello from VisibleGovernment.ca.  We’re a newly established non-partisan non-profit dedicated to promoting online tools for government transparency.  Our campaign website, ibelieveinopen.ca, is collecting pledges from MP candidates supporting the call for greater transparency and accountability in the federal government.  ibelieveinopen.ca is also calling on voters to register their support for our goals.   Voters in your riding that have signed up to ibelieveinopen.ca will be notified by email when you take our pledge.  
+
+As the {{politician.party}} candidate for {{politician.riding_id.name}}, we’d appreciate it if you took a few moments to take a stand for government transparency.
+
+By following this link:
+{{url}}
+Passcode: {{passcode}}
+
+You’ll be able to make your pledge.  For more information, see our website http://ibelieveinopen.ca, or contact Jennifer Bell, VisibleGovernment.ca’s Executive Director, at 514-513-0475 or jennifer@visiblegovernment.ca.
+
+
+ibelieveinopen.ca
+
+

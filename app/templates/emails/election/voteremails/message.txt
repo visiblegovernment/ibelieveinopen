@@ -1,0 +1,72 @@
+﻿Une version francais suit
+
+Hello {{voter.name}},
+
+{% if candidates %}The following candidates from your riding have responded to
+our 'I Believe in Open' campaign:
+{% for candidate in candidates %}
+	{{candidate.name}}, {{candidate.party}}{% endfor %}
+{% else %}No candidates from your riding have responded to the
+'I Believe in Open' campaign.{% endif %}
+
+Full campaign results for your riding can be viewed here:
+http://ibelieveinopen.ca/results/riding/{{riding.edid}}
+
+Thank you for supporting 'I Believe in Open'.  If you:
+
+  - Would like to volunteer for ibelieveinopen.ca
+  - Have some ideas on how governments can be more transparent
+  - Would like to keep tabs on what we're doing between elections
+
+Please join our Facebook group, here:
+http://www.facebook.com/group.php?gid=37307018274
+
+Or subscribe to VisibleGovernment.ca's blog or mailing list, here:
+http://visiblegovernment.ca
+
+Or email your thoughts to ibelieve@visiblegovernment.ca.
+
+Until the next election,
+ibelieveinopen.ca
+
+If you no longer wish to receive emails from 'I Believe in Open', click the link below.
+http://ibelieveinopen.ca/member/no_emails/{{conf_key}}
+
+If you no longer support 'I Believe in Open', and wish to be removed from our records,
+please send an email to: remove_me_from_ibelieve@visiblegovernment.ca
+
+------
+
+Bonjour {{voter.name}},
+
+{% if candidates %}Les candidats suivants de votre circonscription ont répondus à notre campagne:
+
+{% for candidate in candidates %}
+	{{candidate.name}}, {{candidate.party}}{% endfor %}
+{% else %}Aucun candidat de votre circonscription a répondu à notre campagne.{% endif %}
+
+Les résultats complets de votre circonscription peuvent être vus ici:
+http://ibelieveinopen.ca/results/riding/{{riding.edid}}
+
+Merci de soutenir "Je Crois à l’Ouverture". Si vous:
+
+  - Souhaitez faire du bénévolat pour ibelieveinopen.ca;
+  - Avez des idées de la façon dont les gouvernements pourraient être plus transparent;
+  - Tenez à garder un œil sur ce que nous faisons entre élections;
+
+S'il-vous-plaît vous joindre à notre groupe Facebook, ici:
+http://www.facebook.com/group.php?gid=37307018274
+
+Ou voir VisibleGovernment.ca's blogue pour les annonces et mises à jour, ici:
+http://visiblegovernment.ca
+
+On vous revoit à la prochaine élection,
+ibelieveinopen.ca
+
+
+Si vous ne souhaitez plus recevoir les courriels de "Je Crois à l’Ouverture", cliquez sur le lien ci-dessous.
+http://ibelieveinopen.ca/member/no_emails/{{conf_key}}
+
+Si vous ne voulez plus soutenir "Je Crois à l’Ouverture", et souhaitez que votre nom soit retiré de nos fichiers entièrement, s'il vous plaît envoyez-nous un courriel:
+remove_me_from_ibelieve@visiblegovernment.ca
+

@@ -1,0 +1,113 @@
+{% load i18n %}
+
+<style type="text/css" media="screen">
+
+    label {
+    	font-weight: bold;
+    	font-size: 12px;
+    	color:  #4a668d;
+    }
+
+    .data {
+
+    }
+
+	.pledge_comment_info {
+		padding-top: 12px;
+	}
+
+	.response-yes, .response-yes a {
+		font-size: 12px;
+		color: #009900;
+		text-align: center;
+	}
+
+	.response-no, .response-no a {
+		font-size: 12px;
+		color: #990000;
+		text-align: center;
+	}
+
+	td { padding: 5px }
+
+
+	tr.pledgetop {
+		border-top-style: solid;
+		border-width: 3px;
+		border-color: #eeeeee;
+	}
+
+	tr.pledgebottom {
+		border-bottom-style: solid;
+		border-width: 3px;
+		border-color: #eeeeee;
+	}
+
+	p#congrats {
+		text-align: center;
+		font-size: 14px;
+		color:#666;
+		font-style: italic;
+	}
+
+	.pledge_label_row {
+		background-color: #eeeeee;
+	}
+
+</style>
+
+<div id="results">
+<table >
+	{% for result in politician_results %}
+		<tr class="pledge_label_row">
+		<td/>
+		<td width=50%><label>{% trans "Pledge" %}</label></td>
+		<td/>
+		{% for party in parties %}
+			<td align=center width=7%><label>{{party}}</label></td>
+		{% endfor %}
+	</tr>
+
+	<tr class="pledgetop">
+		<td rowspan=2 valign=top >{{result.pledge.id}}. </td>
+		<td rowspan=2 valign=top >{{result.pledge.pledge_text}}
+			(<a href="#" onclick="$('#pledge-{{result.pledge.code}}').slideToggle(250); return false;">?</a>)
+                    <div id="pledge-{{result.pledge.code}}" style="display:none" class="pledge-info">
+                            <p>{{result.pledge.description}}</p>
+                    </div>
+        </td>
+		<td class="response-yes"><a href="/results/summary/Yes/{{result.pledge.id}}/">{% trans "Yes" %}</a></td>
+		{% for total in result.yes_responses %}
+		<td class="response-yes">{{total}}</td>
+		{% endfor %}
+	</tr>
+	<tr class="pledgebottom">
+		<td class="response-no"><a href="/results/summary/No/{{result.pledge.id}}/">{% trans "No" %}</a></td>
+		{% for total in result.no_responses %}
+		<td class="response-no">{{total}}</td>
+		{% endfor %}
+	</tr>
+		<tr>
+		<td/>
+		<td colspan=9>
+	<div class="comments">
+		<a href="#" onclick="$('#pledge_comment-{{result.pledge.code}}').slideToggle(250); return false;">{% trans "Comments:" %} {{result.comments|length}}</a>
+            <div id="pledge_comment-{{result.pledge.code}}" style="display:none" class="pledge_comment_info">
+	{% for pledge_with_comment in result.comments %}
+			<div class="sbl"><div class="sbr"><div class="stl"><div class="str">{{pledge_with_comment.comments}}</div></div></div></div>
+			<div class="sb"><a href="{{pledge_with_comment.politician.get_absolute_url}}">{{pledge_with_comment.politician.name}} ({{pledge_with_comment.politician.party}})</a>
+			{% if pledge_with_comment.supports  %}
+			<span class="response-yes">{% trans "Yes" %}</span>
+			{% else %}
+			<span class="response-no">{% trans "No" %}</span>
+			{% endif %}
+		</div>
+	{% endfor %}
+		</div>
+	</div>
+
+		</td>
+	</tr>
+{% endfor %}
+	</table>
+	</div>

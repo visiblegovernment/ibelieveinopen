@@ -1,0 +1,8 @@
+{% load i18n %}
+<div class="pcodesearch">
+
+<form action="/results/postalcode/" method="post">
+<p><label for="postalcode" style="margin-right:1em;">{% trans "Postal Code:" %}</label><input type="postalcode" name="postalcode" value="" id="postalcode" size="7" style="margin-right:3px;">
+<input type="submit" value="Search"></p>
+</form>
+</div>

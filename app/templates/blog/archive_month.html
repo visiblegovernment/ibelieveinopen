@@ -1,0 +1,16 @@
+{% extends "blog_base.html" %}
+{% block subnav %}
+{# <ul id="subnav" class="clearfix"> #}
+{#  <li class="selected"><a href="/blog/">Home</a></li> #}
+{# </ul> #}
+{% endblock%}
+
+{% block content %}
+<h2>Archive for {{month}}/{{year}}</h2>
+{% for post in posts %}
+
+{% include "blog/display_post.html" %}
+
+{% endfor %}
+
+{% endblock %}

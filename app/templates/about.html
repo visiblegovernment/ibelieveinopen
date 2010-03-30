@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="textblock">
+<p><span class="hcc">{% trans "I Believe In Open" %} </span>{% trans "is a national movement to increase government transparency in Canada. We're organizing citizens to push politicians to make five commitments:" %}</p>
+
+<h5>1.      {% trans "Support reforms that increase government transparency and accountability." %}<h5>
+
+<p>{% trans "Citizens have a right to know what their government is doing.  There are many ideas for how, using information technology, transparency and accountability can be better incorporated into the Canadian parliamentary process and federal civil service." %}</p>
+<p>{% trans "In honouring this pledge, Members of Parliament will support reforms that increase the transparency of these institutions, allowing citizens to know what is happening inside their government." %}</p>
+<h5>2.      {% trans "Make campaign promises specific and measurable, and report progress on promises and their metrics at least semi-annually." %}</h5>
+<p>{% trans "At work, most ordinary citizens have regular performance reviews.  These reviews chart progress that has been made on specific goals.  With Members of Parliament, and the government in general, tracking performance is difficult because promises made during election time are usually neither specific nor measurable." %}  </p>
+<p>{% trans "In honouring this pledge, Members of Parliament must publish a timeline for achieving their promises, along with specific metrics that can be used to judge whether or not a promise has been kept." %}</p>
+<h5>3.      {% trans "Publish the content of his or her daily schedule, including meetings with lobbyists and special interest groups." %}</h5>
+<p>{% trans "We believe that, like ordinary citizens who use a punch clock at work, members of parliament should have to account for their time." %} {% trans "When making this pledge, candidates promise to publish their daily official work schedule on the Internet, within 24 hours of the end of every work day. The schedule must include all matters relating to the candidate’s role as a Member of Parliament, including all meetings with constituents, other Members, and lobbyists, listed by name. (In rare cases withholding the names of constituents whose privacy must be protected.) The schedule will also include all fundraising events. Events will be listed whether Parliament is in session or not, and whether the candidate is in Ottawa, traveling, or in his or her riding." %}
+</p>
+<h5>4.      {% trans "Support reforms allowing free access to scientific and survey data gathered by government institutions." %}</h5>
+<p>
+{% trans "The federal government currently charges citizens various fees for access to data that was gathered by government institutions and funded by the public through taxes.  Recent studies have shown that the benefits to the government of making this data freely accessible, in tax dollars, greatly outweigh the money recovered via access fees." %}</p>
+<p>
+{% trans "In honouring this pledge, the candidate will support reforms that abolish access fees for scientific and survey data gathered by government institutions." %}
+</p>
+<h5>5.      {% trans "Support reforms that make it easier for Canadians to obtain government information they have a right to know." %}</h5>
+<p>
+{% trans "The Canadian Access to Information process is overloaded.  Requests typically take three to nine months to be filled, and the government routinely requests high additional fees to honour requests.    Departments have no standardized IT process for handling requests, and there is no central mechanism for counting the number of requests or publishing results.  In this age of information technology, this is a travesty." %}</p>
+<p>{% trans "In honouring this pledge, Members of Parliament will support reforms that make the Access to Information process faster and more efficient.  The member will support reforms that mandate publishing government information not restricted by citizen privacy issues by default, avoiding the Access to Information process altogether." %}</p>
+
+<h5>{% trans "Get Involved" %}</h5>
+	<table width=100%>
+		<tr valign="middle">
+		<td width=50%>
+ 		<p>{% trans "Join the discussion on our " %}
+ 		 <a href="http://www.new.facebook.com/group.php?gid=37307018274">{% trans "Facebook Group" %} </a>
+		</p>
+		</td>
+		<td>
+ 		<a href = "http://www.new.facebook.com/group.php?gid=37307018274 ">
+ 		<img  width="100px" height="50px" src="/media/images/facebook.gif"/>
+ 		</a>
+ 		</td>
+ 		</tr>
+ 	</table>
+
+
+<h5>{% trans "Contact" %}</h5>
+<p>
+  {% trans "Email <a href='mailto:ibelieve@visiblegovernment.ca'>ibelieve@visiblegovernment.ca</a> with your thoughts." %}
+</p>
+
+
+<h5>{% trans "About Us" %}</h5>
+<p>
+{% trans "This site was produced by <a href='http://visiblegovernment.ca'>VisibleGovernment.ca</a>, a non-partisan non-profit promoting online tools for government transparency in Canada." %}</p>
+
+<h5>{% trans "Credits" %}</h5>
+<ul>
+	<li>{% trans "Design of this site was inspired and facilitated by the US organization <a href='http://change-congress.org'>Change Congress</a>." %}</li>
+	<li>{% trans "Amanda McPherson proposed the 'I Believe in Open' campaign name at the 2008 <a href='http://openeverything.net'>Open Everything</a> retreat." %}</li>
+	<li>{% trans "Hosting kindly provided by the Rae family of Montreal." %}</li>
+</ul>
+
+
+</div>
+{% endblock %}

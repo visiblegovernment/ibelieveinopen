@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Campaign Results{% endblock %}
+{% block js %}
+<script src="{{MEDIA_URL}}jquery.tablesorter.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="{{MEDIA_URL}}blue/style.css" type="text/css" media="screen" title="jquery.Tablesorter theme(Blue)">
+
+<script type="application/x-javascript">
+$(document).ready(function() {
+  $("#tblPledges").tablesorter({sortList: [[1,0]]} );
+  $(".hs").click(function () {
+      update($("span:first"));
+    });
+
+        }
+    );
+    </script>
+{% endblock %}
+{% block content %}
+{% include "results/subnav.html" %}
+
+<ul id="sub-subnav" class="clearfix">
+   <li {% ifequal sub-subnav "Liberal" %}class="selected"{%endifequal%}><a href="/results/party/Liberal/">Liberal</a></li>
+    <li {% ifequal sub-subnav "Conservative" %}class="selected"{%endifequal%}><a href="/results/party/Conservative/">Conservatives</a></li>
+    <li {% ifequal sub-subnav "NDP" %}class="selected"{%endifequal%}><a href="/results/party/NDP/">NDP</a></li>
+    <li {% ifequal sub-subnav "Bloc" %}class="selected"{%endifequal%}><a href="/results/party/Bloc/">Bloc</a></li>
+</ul>
+
+<h6>
+	{% trans "MP Responses" %}
+</h6>
+
+{% include "results/_politician_index.html" %}
+
+{% endblock %}

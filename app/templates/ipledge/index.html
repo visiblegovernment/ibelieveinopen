@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}iPledge{% endblock %}
+{% block js %}
+    <script src="{{MEDIA_URL}}jquery.tablesorter.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="{{MEDIA_URL}}blue/style.css"
+          type="text/css" media="screen" title="jquery.Tablesorter theme(Blue)">
+
+<script type="application/x-javascript">
+$(document).ready(function() { 
+  $("#tblPledges").tablesorter({sortList: [[1,0]]} );
+  $(".hs").click(function () {
+      update($("span:first"));
+    });
+
+        } 
+    ); 
+    </script>
+{% endblock %}
+
+{% block subnav %}
+	<ul id="subnav" class="clearfix">
+        <li {% ifequal title "Liberals" %}class="selected"{%endifequal%}><a href="/ipledge/">Liberals</a></li>
+        <li {% ifequal title "Consevatives" %}class="selected"{%endifequal%}><a href="/ipledge/conservatives/">Conservatives</a></li>
+        <li {% ifequal title "NDP" %}class="selected"{%endifequal%}><a href="/ipledge/ndp/">NDP</a></li>
+    </ul>
+    
+{% endblock %}
+{% block content %}
+<h6>
+	{{title}}
+</h6>
+
+<table width="100%" class="tablesorter" id="tblPledges"> 
+  <thead>
+    <th>First name</th>
+    <th>Last Name</th>
+    <th>Party</th>
+    <th>Province</th>
+    <th>Riding</th>
+    <th>Response</th>
+    </thead>
+    <tbody>
+      {% for c in candidates %}
+       <tr>
+         <td>{{c.fname}}</td>
+		 <td>{{c.lname}}</td> 
+		 <td>{{c.party}}</td>
+		<td>{{c.province}}</td>
+		<td>{{c.riding_id.name}}</td>
+		
+
+		<td>{% if c.ipledge_has_responded %}<a href={{c.get_absolute_url}} >Yes</a> 
+			{% else %}No</a>{% endif %}
+		</td>
+		</tr>
+      {% endfor %}
+      </tbody>
+  </table>
+
+{% endblock %}

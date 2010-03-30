@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}Member : Email Address Confirmed{% endblock %}
+{% load i18n %}
+{% block content %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<style type="text/css" media="screen">
+    .support-option {
+        float: center;
+        margin: 40px;
+     }
+
+     .support-option dt {
+     	font-size: 16px;
+     	font-weight: bold;
+     }
+
+     #thanks {
+     	width: 600px;
+     	float: center;
+     	text-align: center;
+     	margin-top: 60px;
+     }
+
+</style>
+<div class="textblock">
+
+<h2>{% trans "Signup Confirmed" %}</h2>
+{% if member %}
+    <p>{% trans "Thanks for confirming your email address.  We have registered your email as belonging to the riding:" %} {{ member.riding.name }}.</p>
+ <p/>
+ <p/>
+    <p>{% trans "We'd like to reach as many potential supporters as we can.  Here are three ways to show your support and help spread the message of 'I Believe in Open'" %}:</p>
+
+ <dl class="support-option">
+
+ 		<dt>{% trans "1.  Tell Your Friends" %}</dt>
+ 		<dd>
+ 			<p>{% trans "You can send your friends an email to tell them about 'I Believe In Open'.  We've just sent you an email to thank you for signing up.  If you like, you can forward that email to people you think might be interested, to let them know about our site." %}</p>
+ 		</dd>
+
+ </dl>
+
+<dl class="support-option">
+
+    <dt>{% trans "2. Add a Badge" %} <dt>
+    <dd>
+    	<p>{% trans "Your 'I Believe in Open' badge is below.  If you have a website (or a blog!) you can use the code shown to add this badge to your site." %}</p>
+
+<table width=600 align=center>
+<tr>
+	<td width=33% >
+ 		<img class="stars" src="/media/images/ibelieve-badge-{{LANGUAGE_CODE}}-3-{{member.ipledge_supported_issues}}.png" width="150px" height="76px" alt="I Believe in Open Badge"/>
+  	</td>
+	<td>
+	<label style="font-size: 10px;" >{% trans "Cut and paste this code to your website:" %}</label>
+
+ 	<form>
+ 		<textarea cols="60" rows="5" ><a href="http://ibelieveinopen.ca"><img src="http://images.ibelieveinopen.ca/media/images/ibelieve-badge-{{LANGUAGE_CODE}}-3-{{member.ipledge_supported_issues}}.png" alt="I Believe in Open Badge" /></a></textarea>
+ 	</form>
+ 	</td>
+ </tr>
+ </table>
+ </dd>
+ </dl>
+
+ <dl class="support-option">
+ 		<dt>{% trans "3. Join our "%} <a href="http://www.new.facebook.com/group.php?gid=37307018274">{% trans "Facebook Group" %}</a></dt>
+ 		<dd>
+ 			<p/>
+ 			<table width=600 align=center>
+ 			<tr>
+ 				<td width=33%>
+ 					<a href = "http://www.new.facebook.com/group.php?gid=37307018274 ">
+ 						<img  width="150px" height="76px" src="/media/images/facebook.gif"/>
+ 					</a>
+ 				</td>
+ 				<td>
+ 					 <p>{% trans "If you like, you can invite your friends to join too." %}</p>
+ 				</td>
+			</tr>
+ 			</table>
+ 		</dd>
+ </dl>
+
+ <p><p>
+
+<div id="thanks"><p><strong>{% trans "Thank you for your support." %}</strong></p></div>
+
+{% else %}
+    <p>{% trans "Invalid confirmation key." %}</p>
+{% endif %}
+</div>
+
+{% endblock %}

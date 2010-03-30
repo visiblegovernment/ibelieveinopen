@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}iPledge Login{% endblock %}
+
+{% block content %}
+<div class="textblock">
+<h3>iPledge Login</h3>
+<p>Welcome, {{politician.name}}</p>
+<form action="." method="post">
+<p><input type="hidden" name="username" value="{{pid}}"/></p>
+<p><label for="password" style="margin-right:1em;">Password</label><input type="password" name="password" value="" id="password"></p>
+<p><input type="submit" value="Continue &rarr;"></p>
+</form>
+</div>
+{% endblock %}

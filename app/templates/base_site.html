@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>I Believe in Open &mdash; {% block title %}Home{% endblock %}</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <link href="{{MEDIA_URL}}style-1.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 7]>
+    <style type="text/css" media="screen">
+        #navbar li {
+            width: 50px;
+        }
+        #navbar li a:hover {color: #fff;}
+        #navbar li.selected a:hover {color: #02245c;}
+        #navbar li.selected a, #navbar li.selected a:visited {color: #02245c;}
+        #content {
+            width: 925px;
+           padding: 30px 10px 10px 10px;
+        }
+    </style>
+    <![endif]-->
+    {% block css %}{% endblock %}
+
+    <script src="{{MEDIA_URL}}jsr_class.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8" src="{{MEDIA_URL}}jquery-1.2.3.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="{{MEDIA_URL}}jquery-form.js"></script>
+
+    <script type="text/javascript">
+        function navbarTabSelect(){
+                        var url = location.href;
+                        if (url.indexOf("tag") != -1){
+                                $("#navbar li.tag").addClass("selected");
+                        }
+                }
+        $(document).ready(function(){
+            navbarTabSelect();
+        })
+    </script>
+    {% block js %}{% endblock %}
+
+</head>
+{% load i18n %}
+
+<body class="{% block bodyclass %}main{% endblock %}">
+<div id="page">
+    <div id="header">
+    	<div id="header_top"></div>
+    	<div id="header_content">
+    	<div id="logo"><a href="/"><img src="/media/images/ibelieve-logo.png" alt="I Believe in Open"></a></div>
+    	<div id="siteby"><a href="http://visiblegovernment.ca/"><img src="/media/images/sitebyvg.png" alt="A VisibleGovernment.ca Site"></a></div>
+    	</div>
+    </div>
+
+    <div id="navbar">
+        {% include "navbar.html" %}
+        <div id="navbar-right">
+           {% if user.is_authenticated %}
+            <a href="/accounts/logout/">(logout)</a>
+            {% else %}
+                   <div class="language">
+<form action="/i18n/setlang/" method="post">
+<select name="language">
+{% for lang in LANGUAGES %}
+<option value="{{ lang.0 }}">{{ lang.1 }}</option>
+{% endfor %}
+</select>
+<input type="submit" value="Go" />
+</form>
+
+			</div>
+        	{% endif %}
+        	</div>
+    </div>
+
+    <div id="content">
+	{% if msg2 %}
+		<p class="notice" id="notice">
+	{% else %}
+		<p class="notice" id="notice" style="display:none; margin-bottom:0px; margin-top:0px;">
+	{% endif %}
+	{{ msg }}
+	</p>
+
+{% block main %}
+    {% block subnav %}{% endblock %}
+    {% block content %}{% endblock %}
+{% endblock %}
+	</div>
+    <div id="footer">
+	{% block extrafooter %}
+
+	{% endblock %}
+        <p>Read our <a href="/about/tos">Terms and Conditions</a> and our <a href="/about/privacy">Privacy Policy</a>.</p>
+        <p><a href="mailto:ibelieve@visiblegovernment.ca">ibelieve@visiblegovernment.ca</a> | <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/us/80x15.png" align="top"/></a></p>
+    </div>
+</div>
+{% block cc_map %}{% endblock %}
+{% if not LOCAL_DEV %}
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1066769-3");
+pageTracker._trackPageview();
+</script>
+{% endif %}
+
+</body>
+</html>

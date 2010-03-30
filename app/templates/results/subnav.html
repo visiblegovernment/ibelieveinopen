@@ -1,0 +1,10 @@
+{% load i18n %}
+
+{% block subnav %}
+	<ul id="subnav" class="clearfix">
+		<li {% ifequal subnav "Summary" %}class="selected"{%endifequal%}><a href="/results/politicians/">{% trans "Summary" %}</a></li>
+		<li {% ifequal subnav "By Riding" %}class="selected"{%endifequal%}><a href="/results/postalcode/">{% trans "By Riding" %}</a></li>
+        <li {% ifequal subnav "All Members" %}class="selected"{%endifequal%}><a href="/results/party/Liberal/">{% trans "All MPs" %}</a></li>
+     </ul>
+
+{% endblock %}

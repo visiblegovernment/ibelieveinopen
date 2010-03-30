@@ -1,0 +1,28 @@
+Dear {{politician.fname}} {{politician.lname}},
+
+It's not too late to take a stand for transparency at
+'I Believe In Open'. Our campaign website, ibelieveinopen.ca,
+is still collecting pledges from MP candidates supporting
+the call for greater transparency and accountability in the
+federal government.
+
+{% if other_candidates %}
+These candidates from your party have already responded:
+{% for candidate in other_candidates %}
+	{{candidate.fname}} {{candidate.lname}}{% endfor %}
+{% endif %}
+
+Please take a few minutes to fill out our pledge to show
+your constituents where you stand.
+
+You can make your pledge by following this link:
+{{url}}
+Passcode: {{passcode}}
+
+Good luck in the upcoming election.
+
+If you have any questions, please contact Jennifer Bell,
+VisibleGovernment.ca's Executive Director, at 514-513-0475
+or jennifer@visiblegovernment.ca.
+
+Jennifer Bell

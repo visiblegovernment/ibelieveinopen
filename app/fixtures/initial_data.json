@@ -1,0 +1,2536 @@
+[
+    {
+        "pk": 1,
+        "model": "sites.site",
+        "fields": {
+            "domain": "example.com",
+            "name": "example.com"
+        }
+    },
+    {
+        "pk": 10001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NL",
+            "name": "Avalon"
+        }
+    },
+    {
+        "pk": 10002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NL",
+            "name": "Bonavista - Gander - Grand Falls - Windsor"
+        }
+    },
+    {
+        "pk": 10003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NL",
+            "name": "Humber - St. Barbe - Baie Verte"
+        }
+    },
+    {
+        "pk": 10004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NL",
+            "name": "Labrador"
+        }
+    },
+    {
+        "pk": 10005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NL",
+            "name": "Random - Burin - St. George's"
+        }
+    },
+    {
+        "pk": 10006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NL",
+            "name": "St. John's East"
+        }
+    },
+    {
+        "pk": 10007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NL",
+            "name": "St. John's South - Mount Pearl"
+        }
+    },
+    {
+        "pk": 11001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "PE",
+            "name": "Cardigan"
+        }
+    },
+    {
+        "pk": 11002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "PE",
+            "name": "Charlottetown"
+        }
+    },
+    {
+        "pk": 11003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "PE",
+            "name": "Egmont"
+        }
+    },
+    {
+        "pk": 11004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "PE",
+            "name": "Malpeque"
+        }
+    },
+    {
+        "pk": 12001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Cape Breton - Canso"
+        }
+    },
+    {
+        "pk": 12002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Central Nova"
+        }
+    },
+    {
+        "pk": 12003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Dartmouth - Cole Harbour"
+        }
+    },
+    {
+        "pk": 12004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Halifax"
+        }
+    },
+    {
+        "pk": 12005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Halifax West"
+        }
+    },
+    {
+        "pk": 12006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Kings - Hants"
+        }
+    },
+    {
+        "pk": 12007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Cumberland - Colchester - Musquodoboit Valley"
+        }
+    },
+    {
+        "pk": 12008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Sackville - Eastern Shore"
+        }
+    },
+    {
+        "pk": 12009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "South Shore - St. Margaret's"
+        }
+    },
+    {
+        "pk": 12010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "Sydney - Victoria"
+        }
+    },
+    {
+        "pk": 12011,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NS",
+            "name": "West Nova"
+        }
+    },
+    {
+        "pk": 13001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Acadie - Bathurst"
+        }
+    },
+    {
+        "pk": 13002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Beaus\u00e9jour"
+        }
+    },
+    {
+        "pk": 13003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Fredericton"
+        }
+    },
+    {
+        "pk": 13004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Fundy Royal"
+        }
+    },
+    {
+        "pk": 13005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Madawaska - Restigouche"
+        }
+    },
+    {
+        "pk": 13006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Miramichi"
+        }
+    },
+    {
+        "pk": 13007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Moncton - Riverview - Dieppe"
+        }
+    },
+    {
+        "pk": 13008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "New Brunswick Southwest"
+        }
+    },
+    {
+        "pk": 13009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Saint John"
+        }
+    },
+    {
+        "pk": 13010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NB",
+            "name": "Tobique - Mactaquac"
+        }
+    },
+    {
+        "pk": 24001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Abitibi - T\u00e9miscamingue"
+        }
+    },
+    {
+        "pk": 24002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Ahuntsic"
+        }
+    },
+    {
+        "pk": 24003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Alfred-Pellan"
+        }
+    },
+    {
+        "pk": 24004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Argenteuil - Papineau - Mirabel"
+        }
+    },
+    {
+        "pk": 24005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Beauce"
+        }
+    },
+    {
+        "pk": 24006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Beauharnois - Salaberry"
+        }
+    },
+    {
+        "pk": 24007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Beauport - Limoilou"
+        }
+    },
+    {
+        "pk": 24008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Berthier - Maskinong\u00e9"
+        }
+    },
+    {
+        "pk": 24009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Bourassa"
+        }
+    },
+    {
+        "pk": 24010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Brome - Missisquoi"
+        }
+    },
+    {
+        "pk": 24011,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Brossard - La Prairie"
+        }
+    },
+    {
+        "pk": 24012,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Chambly - Borduas"
+        }
+    },
+    {
+        "pk": 24013,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Charlesbourg - Haute-Saint-Charles"
+        }
+    },
+    {
+        "pk": 24014,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Montmorency - Charlevoix - Haute-C\u00f4te-Nord"
+        }
+    },
+    {
+        "pk": 24015,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Ch\u00e2teauguay - Saint-Constant"
+        }
+    },
+    {
+        "pk": 24016,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Chicoutimi - Le Fjord"
+        }
+    },
+    {
+        "pk": 24017,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Compton - Stanstead"
+        }
+    },
+    {
+        "pk": 24018,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Drummond"
+        }
+    },
+    {
+        "pk": 24019,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Gasp\u00e9sie - \u00celes-de-la-Madeleine"
+        }
+    },
+    {
+        "pk": 24020,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Gatineau"
+        }
+    },
+    {
+        "pk": 24021,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Hochelaga"
+        }
+    },
+    {
+        "pk": 24022,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Honor\u00e9-Mercier"
+        }
+    },
+    {
+        "pk": 24023,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Hull - Aylmer"
+        }
+    },
+    {
+        "pk": 24024,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Jeanne-Le Ber"
+        }
+    },
+    {
+        "pk": 24025,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Joliette"
+        }
+    },
+    {
+        "pk": 24026,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Jonqui\u00e8re - Alma"
+        }
+    },
+    {
+        "pk": 24027,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Lac-Saint-Louis"
+        }
+    },
+    {
+        "pk": 24028,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "La Pointe-de-l'\u00cele"
+        }
+    },
+    {
+        "pk": 24029,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "LaSalle - \u00c9mard"
+        }
+    },
+    {
+        "pk": 24030,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Laurentides - Labelle"
+        }
+    },
+    {
+        "pk": 24031,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Laurier - Sainte-Marie"
+        }
+    },
+    {
+        "pk": 24032,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Laval"
+        }
+    },
+    {
+        "pk": 24033,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Laval - Les \u00celes"
+        }
+    },
+    {
+        "pk": 24034,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "L\u00e9vis - Bellechasse"
+        }
+    },
+    {
+        "pk": 24035,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Longueuil - Pierre-Boucher"
+        }
+    },
+    {
+        "pk": 24036,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Lotbini\u00e8re - Chutes-de-la-Chaudi\u00e8re"
+        }
+    },
+    {
+        "pk": 24037,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Louis-H\u00e9bert"
+        }
+    },
+    {
+        "pk": 24038,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Louis-Saint-Laurent"
+        }
+    },
+    {
+        "pk": 24039,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Manicouagan"
+        }
+    },
+    {
+        "pk": 24040,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Marc-Aur\u00e8le-Fortin"
+        }
+    },
+    {
+        "pk": 24041,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Haute-Gasp\u00e9sie--La Mitis--Matane--Matap\u00e9dia"
+        }
+    },
+    {
+        "pk": 24042,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "M\u00e9gantic - L'\u00c9rable"
+        }
+    },
+    {
+        "pk": 24043,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Montcalm"
+        }
+    },
+    {
+        "pk": 24044,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Mount Royal"
+        }
+    },
+    {
+        "pk": 24045,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Notre-Dame-de-Gr\u00e2ce - Lachine"
+        }
+    },
+    {
+        "pk": 24046,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Abitibi - Baie-James - Nunavik - Eeyou"
+        }
+    },
+    {
+        "pk": 24047,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Outremont"
+        }
+    },
+    {
+        "pk": 24048,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Papineau"
+        }
+    },
+    {
+        "pk": 24049,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Pierrefonds - Dollard"
+        }
+    },
+    {
+        "pk": 24050,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Pontiac"
+        }
+    },
+    {
+        "pk": 24051,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Portneuf--Jacques-Cartier"
+        }
+    },
+    {
+        "pk": 24052,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Qu\u00e9bec"
+        }
+    },
+    {
+        "pk": 24053,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Repentigny"
+        }
+    },
+    {
+        "pk": 24054,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Bas-Richelieu - Nicolet - B\u00e9cancour"
+        }
+    },
+    {
+        "pk": 24055,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Richmond - Arthabaska"
+        }
+    },
+    {
+        "pk": 24056,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Rimouski-Neigette - T\u00e9miscouata - Les Basques"
+        }
+    },
+    {
+        "pk": 24057,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Rivi\u00e8re-des-Mille-\u00celes"
+        }
+    },
+    {
+        "pk": 24058,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Montmagny - L'Islet - Kamouraska - Rivi\u00e8re-du-Loup"
+        }
+    },
+    {
+        "pk": 24059,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Rivi\u00e8re-du-Nord"
+        }
+    },
+    {
+        "pk": 24060,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Roberval - Lac-Saint-Jean"
+        }
+    },
+    {
+        "pk": 24061,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Rosemont - La Petite-Patrie"
+        }
+    },
+    {
+        "pk": 24062,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Saint-Bruno - Saint-Hubert"
+        }
+    },
+    {
+        "pk": 24063,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Saint-Hyacinthe - Bagot"
+        }
+    },
+    {
+        "pk": 24064,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Saint-Jean"
+        }
+    },
+    {
+        "pk": 24065,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Saint-Lambert"
+        }
+    },
+    {
+        "pk": 24066,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Saint-Laurent - Cartierville"
+        }
+    },
+    {
+        "pk": 24067,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Saint-L\u00e9onard - Saint-Michel"
+        }
+    },
+    {
+        "pk": 24068,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Saint-Maurice - Champlain"
+        }
+    },
+    {
+        "pk": 24069,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Shefford"
+        }
+    },
+    {
+        "pk": 24070,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Sherbrooke"
+        }
+    },
+    {
+        "pk": 24071,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Terrebonne - Blainville"
+        }
+    },
+    {
+        "pk": 24072,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Trois-Rivi\u00e8res"
+        }
+    },
+    {
+        "pk": 24073,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Vaudreuil-Soulanges"
+        }
+    },
+    {
+        "pk": 24074,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Verch\u00e8res - Les Patriotes"
+        }
+    },
+    {
+        "pk": 24075,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "QC",
+            "name": "Westmount - Ville-Marie"
+        }
+    },
+    {
+        "pk": 35001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Ajax - Pickering"
+        }
+    },
+    {
+        "pk": 35002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Algoma - Manitoulin - Kapuskasing"
+        }
+    },
+    {
+        "pk": 35003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Ancaster - Dundas - Flamborough - Westdale"
+        }
+    },
+    {
+        "pk": 35004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Barrie"
+        }
+    },
+    {
+        "pk": 35005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Beaches - East York"
+        }
+    },
+    {
+        "pk": 35006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Bramalea - Gore - Malton"
+        }
+    },
+    {
+        "pk": 35007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Brampton - Springdale"
+        }
+    },
+    {
+        "pk": 35008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Brampton West"
+        }
+    },
+    {
+        "pk": 35009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Brant"
+        }
+    },
+    {
+        "pk": 35010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Burlington"
+        }
+    },
+    {
+        "pk": 35011,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Cambridge"
+        }
+    },
+    {
+        "pk": 35012,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Carleton - Mississippi Mills"
+        }
+    },
+    {
+        "pk": 35013,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Chatham-Kent - Essex"
+        }
+    },
+    {
+        "pk": 35014,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Durham"
+        }
+    },
+    {
+        "pk": 35015,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Davenport"
+        }
+    },
+    {
+        "pk": 35016,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Don Valley East"
+        }
+    },
+    {
+        "pk": 35017,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Don Valley West"
+        }
+    },
+    {
+        "pk": 35018,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Dufferin - Caledon"
+        }
+    },
+    {
+        "pk": 35019,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Eglinton - Lawrence"
+        }
+    },
+    {
+        "pk": 35020,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Elgin - Middlesex - London"
+        }
+    },
+    {
+        "pk": 35021,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Essex"
+        }
+    },
+    {
+        "pk": 35022,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Etobicoke Centre"
+        }
+    },
+    {
+        "pk": 35023,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Etobicoke - Lakeshore"
+        }
+    },
+    {
+        "pk": 35024,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Etobicoke North"
+        }
+    },
+    {
+        "pk": 35025,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Glengarry - Prescott - Russell"
+        }
+    },
+    {
+        "pk": 35026,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Bruce - Grey - Owen Sound"
+        }
+    },
+    {
+        "pk": 35027,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Guelph"
+        }
+    },
+    {
+        "pk": 35028,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Haldimand - Norfolk"
+        }
+    },
+    {
+        "pk": 35029,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Haliburton - Kawartha Lakes - Brock"
+        }
+    },
+    {
+        "pk": 35030,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Halton"
+        }
+    },
+    {
+        "pk": 35031,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Hamilton Centre"
+        }
+    },
+    {
+        "pk": 35032,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Hamilton East - Stoney Creek"
+        }
+    },
+    {
+        "pk": 35033,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Hamilton Mountain"
+        }
+    },
+    {
+        "pk": 35034,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Huron - Bruce"
+        }
+    },
+    {
+        "pk": 35035,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Kenora"
+        }
+    },
+    {
+        "pk": 35036,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Kingston and the Islands"
+        }
+    },
+    {
+        "pk": 35037,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Kitchener Centre"
+        }
+    },
+    {
+        "pk": 35038,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Kitchener - Conestoga"
+        }
+    },
+    {
+        "pk": 35039,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Kitchener - Waterloo"
+        }
+    },
+    {
+        "pk": 35040,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Lanark - Frontenac - Lennox and Addington"
+        }
+    },
+    {
+        "pk": 35041,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Leeds - Grenville"
+        }
+    },
+    {
+        "pk": 35042,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "London - Fanshawe"
+        }
+    },
+    {
+        "pk": 35043,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "London North Centre"
+        }
+    },
+    {
+        "pk": 35044,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "London West"
+        }
+    },
+    {
+        "pk": 35045,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Markham - Unionville"
+        }
+    },
+    {
+        "pk": 35046,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Lambton - Kent - Middlesex"
+        }
+    },
+    {
+        "pk": 35047,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Mississauga - Brampton South"
+        }
+    },
+    {
+        "pk": 35048,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Mississauga East - Cooksville"
+        }
+    },
+    {
+        "pk": 35049,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Mississauga - Erindale"
+        }
+    },
+    {
+        "pk": 35050,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Mississauga South"
+        }
+    },
+    {
+        "pk": 35051,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Mississauga - Streetsville"
+        }
+    },
+    {
+        "pk": 35052,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Nepean - Carleton"
+        }
+    },
+    {
+        "pk": 35053,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Newmarket - Aurora"
+        }
+    },
+    {
+        "pk": 35054,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Niagara Falls"
+        }
+    },
+    {
+        "pk": 35055,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Niagara West - Glanbrook"
+        }
+    },
+    {
+        "pk": 35056,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Nickel Belt"
+        }
+    },
+    {
+        "pk": 35057,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Nipissing - Timiskaming"
+        }
+    },
+    {
+        "pk": 35058,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Northumberland - Quinte West"
+        }
+    },
+    {
+        "pk": 35059,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Oak Ridges - Markham"
+        }
+    },
+    {
+        "pk": 35060,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Oakville"
+        }
+    },
+    {
+        "pk": 35061,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Oshawa"
+        }
+    },
+    {
+        "pk": 35062,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Ottawa Centre"
+        }
+    },
+    {
+        "pk": 35063,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Ottawa - Orl\u00e9ans"
+        }
+    },
+    {
+        "pk": 35064,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Ottawa South"
+        }
+    },
+    {
+        "pk": 35065,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Ottawa - Vanier"
+        }
+    },
+    {
+        "pk": 35066,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Ottawa West - Nepean"
+        }
+    },
+    {
+        "pk": 35067,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Oxford"
+        }
+    },
+    {
+        "pk": 35068,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Parkdale - High Park"
+        }
+    },
+    {
+        "pk": 35069,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Parry Sound - Muskoka"
+        }
+    },
+    {
+        "pk": 35070,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Perth - Wellington"
+        }
+    },
+    {
+        "pk": 35071,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Peterborough"
+        }
+    },
+    {
+        "pk": 35072,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Pickering - Scarborough East"
+        }
+    },
+    {
+        "pk": 35073,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Prince Edward - Hastings"
+        }
+    },
+    {
+        "pk": 35074,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Renfrew - Nipissing - Pembroke"
+        }
+    },
+    {
+        "pk": 35075,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Richmond Hill"
+        }
+    },
+    {
+        "pk": 35076,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "St. Catharines"
+        }
+    },
+    {
+        "pk": 35077,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "St. Paul's"
+        }
+    },
+    {
+        "pk": 35078,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Sarnia - Lambton"
+        }
+    },
+    {
+        "pk": 35079,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Sault Ste. Marie"
+        }
+    },
+    {
+        "pk": 35080,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Scarborough - Agincourt"
+        }
+    },
+    {
+        "pk": 35081,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Scarborough Centre"
+        }
+    },
+    {
+        "pk": 35082,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Scarborough - Guildwood"
+        }
+    },
+    {
+        "pk": 35083,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Scarborough - Rouge River"
+        }
+    },
+    {
+        "pk": 35084,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Scarborough Southwest"
+        }
+    },
+    {
+        "pk": 35085,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Simcoe - Grey"
+        }
+    },
+    {
+        "pk": 35086,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Simcoe North"
+        }
+    },
+    {
+        "pk": 35087,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Stormont - Dundas - South Glengarry"
+        }
+    },
+    {
+        "pk": 35088,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Sudbury"
+        }
+    },
+    {
+        "pk": 35089,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Thornhill"
+        }
+    },
+    {
+        "pk": 35090,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Thunder Bay - Rainy River"
+        }
+    },
+    {
+        "pk": 35091,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Thunder Bay - Superior North"
+        }
+    },
+    {
+        "pk": 35092,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Timmins - James Bay"
+        }
+    },
+    {
+        "pk": 35093,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Toronto Centre"
+        }
+    },
+    {
+        "pk": 35094,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Toronto - Danforth"
+        }
+    },
+    {
+        "pk": 35095,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Trinity - Spadina"
+        }
+    },
+    {
+        "pk": 35096,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Vaughan"
+        }
+    },
+    {
+        "pk": 35097,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Welland"
+        }
+    },
+    {
+        "pk": 35098,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Wellington - Halton Hills"
+        }
+    },
+    {
+        "pk": 35099,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Whitby - Oshawa"
+        }
+    },
+    {
+        "pk": 35100,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Willowdale"
+        }
+    },
+    {
+        "pk": 35101,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Windsor - Tecumseh"
+        }
+    },
+    {
+        "pk": 35102,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "Windsor West"
+        }
+    },
+    {
+        "pk": 35103,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "York Centre"
+        }
+    },
+    {
+        "pk": 35104,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "York - Simcoe"
+        }
+    },
+    {
+        "pk": 35105,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "York South - Weston"
+        }
+    },
+    {
+        "pk": 35106,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "ON",
+            "name": "York West"
+        }
+    },
+    {
+        "pk": 46001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Brandon - Souris"
+        }
+    },
+    {
+        "pk": 46002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Charleswood - St. James - Assiniboia"
+        }
+    },
+    {
+        "pk": 46003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Churchill"
+        }
+    },
+    {
+        "pk": 46004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Dauphin - Swan River - Marquette"
+        }
+    },
+    {
+        "pk": 46005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Elmwood - Transcona"
+        }
+    },
+    {
+        "pk": 46006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Kildonan - St. Paul"
+        }
+    },
+    {
+        "pk": 46007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Portage - Lisgar"
+        }
+    },
+    {
+        "pk": 46008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Provencher"
+        }
+    },
+    {
+        "pk": 46009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Saint Boniface"
+        }
+    },
+    {
+        "pk": 46010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Selkirk - Interlake"
+        }
+    },
+    {
+        "pk": 46011,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Winnipeg Centre"
+        }
+    },
+    {
+        "pk": 46012,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Winnipeg North"
+        }
+    },
+    {
+        "pk": 46013,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Winnipeg South"
+        }
+    },
+    {
+        "pk": 46014,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "MB",
+            "name": "Winnipeg South Centre"
+        }
+    },
+    {
+        "pk": 47001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Battlefords - Lloydminster"
+        }
+    },
+    {
+        "pk": 47002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Blackstrap"
+        }
+    },
+    {
+        "pk": 47003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Desneth\u00e9 - Missinippi - Churchill River"
+        }
+    },
+    {
+        "pk": 47004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Cypress Hills - Grasslands"
+        }
+    },
+    {
+        "pk": 47005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Palliser"
+        }
+    },
+    {
+        "pk": 47006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Prince Albert"
+        }
+    },
+    {
+        "pk": 47007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Regina - Lumsden - Lake Centre"
+        }
+    },
+    {
+        "pk": 47008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Regina - Qu'Appelle"
+        }
+    },
+    {
+        "pk": 47009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Saskatoon - Humboldt"
+        }
+    },
+    {
+        "pk": 47010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Saskatoon - Rosetown - Biggar"
+        }
+    },
+    {
+        "pk": 47011,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Saskatoon - Wanuskewin"
+        }
+    },
+    {
+        "pk": 47012,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Souris - Moose Mountain"
+        }
+    },
+    {
+        "pk": 47013,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Wascana"
+        }
+    },
+    {
+        "pk": 47014,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "SK",
+            "name": "Yorkton - Melville"
+        }
+    },
+    {
+        "pk": 48001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Fort McMurray - Athabasca"
+        }
+    },
+    {
+        "pk": 48002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary East"
+        }
+    },
+    {
+        "pk": 48003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary Centre-North"
+        }
+    },
+    {
+        "pk": 48004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary Northeast"
+        }
+    },
+    {
+        "pk": 48005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary - Nose Hill"
+        }
+    },
+    {
+        "pk": 48006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary Centre"
+        }
+    },
+    {
+        "pk": 48007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary Southeast"
+        }
+    },
+    {
+        "pk": 48008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary Southwest"
+        }
+    },
+    {
+        "pk": 48009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Calgary West"
+        }
+    },
+    {
+        "pk": 48010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Crowfoot"
+        }
+    },
+    {
+        "pk": 48011,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton - Mill Woods - Beaumont"
+        }
+    },
+    {
+        "pk": 48012,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton Centre"
+        }
+    },
+    {
+        "pk": 48013,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton East"
+        }
+    },
+    {
+        "pk": 48014,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton - Leduc"
+        }
+    },
+    {
+        "pk": 48015,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton - St. Albert"
+        }
+    },
+    {
+        "pk": 48016,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton - Sherwood Park"
+        }
+    },
+    {
+        "pk": 48017,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton - Spruce Grove"
+        }
+    },
+    {
+        "pk": 48018,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Edmonton - Strathcona"
+        }
+    },
+    {
+        "pk": 48019,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Lethbridge"
+        }
+    },
+    {
+        "pk": 48020,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Macleod"
+        }
+    },
+    {
+        "pk": 48021,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Medicine Hat"
+        }
+    },
+    {
+        "pk": 48022,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Peace River"
+        }
+    },
+    {
+        "pk": 48023,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Red Deer"
+        }
+    },
+    {
+        "pk": 48024,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Vegreville - Wainwright"
+        }
+    },
+    {
+        "pk": 48025,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Westlock - St. Paul"
+        }
+    },
+    {
+        "pk": 48026,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Wetaskiwin"
+        }
+    },
+    {
+        "pk": 48027,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Wild Rose"
+        }
+    },
+    {
+        "pk": 48028,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "AB",
+            "name": "Yellowhead"
+        }
+    },
+    {
+        "pk": 59001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Abbotsford"
+        }
+    },
+    {
+        "pk": 59002,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Burnaby - Douglas"
+        }
+    },
+    {
+        "pk": 59003,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Burnaby - New Westminster"
+        }
+    },
+    {
+        "pk": 59004,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Cariboo - Prince George"
+        }
+    },
+    {
+        "pk": 59005,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Chilliwack - Fraser Canyon"
+        }
+    },
+    {
+        "pk": 59006,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Delta - Richmond East"
+        }
+    },
+    {
+        "pk": 59007,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Pitt Meadows - Maple Ridge - Mission"
+        }
+    },
+    {
+        "pk": 59008,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Esquimalt - Juan de Fuca"
+        }
+    },
+    {
+        "pk": 59009,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Fleetwood - Port Kells"
+        }
+    },
+    {
+        "pk": 59010,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Kamloops - Thompson - Cariboo"
+        }
+    },
+    {
+        "pk": 59011,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Kelowna - Lake Country"
+        }
+    },
+    {
+        "pk": 59012,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Kootenay - Columbia"
+        }
+    },
+    {
+        "pk": 59013,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Langley"
+        }
+    },
+    {
+        "pk": 59014,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Nanaimo - Alberni"
+        }
+    },
+    {
+        "pk": 59015,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Nanaimo - Cowichan"
+        }
+    },
+    {
+        "pk": 59016,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Newton - North Delta"
+        }
+    },
+    {
+        "pk": 59017,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "New Westminster - Coquitlam"
+        }
+    },
+    {
+        "pk": 59018,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Okanagan - Shuswap"
+        }
+    },
+    {
+        "pk": 59019,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "North Vancouver"
+        }
+    },
+    {
+        "pk": 59020,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Okanagan - Coquihalla"
+        }
+    },
+    {
+        "pk": 59021,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Port Moody - Westwood - Port Coquitlam"
+        }
+    },
+    {
+        "pk": 59022,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Prince George - Peace River"
+        }
+    },
+    {
+        "pk": 59023,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Richmond"
+        }
+    },
+    {
+        "pk": 59024,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Saanich - Gulf Islands"
+        }
+    },
+    {
+        "pk": 59025,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Skeena - Bulkley Valley"
+        }
+    },
+    {
+        "pk": 59026,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "British Columbia Southern Interior"
+        }
+    },
+    {
+        "pk": 59027,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "South Surrey - White Rock - Cloverdale"
+        }
+    },
+    {
+        "pk": 59028,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Surrey North"
+        }
+    },
+    {
+        "pk": 59029,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Vancouver Centre"
+        }
+    },
+    {
+        "pk": 59030,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Vancouver East"
+        }
+    },
+    {
+        "pk": 59031,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Vancouver Island North"
+        }
+    },
+    {
+        "pk": 59032,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Vancouver Kingsway"
+        }
+    },
+    {
+        "pk": 59033,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Vancouver Quadra"
+        }
+    },
+    {
+        "pk": 59034,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Vancouver South"
+        }
+    },
+    {
+        "pk": 59035,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "Victoria"
+        }
+    },
+    {
+        "pk": 59036,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "BC",
+            "name": "West Vancouver - Sunshine Coast - Sea to Sky Country"
+        }
+    },
+    {
+        "pk": 60001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "YT",
+            "name": "Yukon"
+        }
+    },
+    {
+        "pk": 61001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NT",
+            "name": "Western Arctic"
+        }
+    },
+    {
+        "pk": 62001,
+        "model": "mainapp.riding",
+        "fields": {
+            "province": "NU",
+            "name": "Nunavut"
+        }
+    },
+    {
+        "pk": "H2J3S6",
+        "model": "mainapp.postalcode",
+        "fields": {
+            "riding": 24031
+        }
+    },
+    {
+        "pk": 1,
+        "model": "mainapp.pledge",
+        "fields": {
+            "pledge_text": "Support reforms that increase government transparency and accountability.",
+            "created_at": "2008-09-13 00:00:00",
+            "code": "t",
+            "name": "Transparency Reforms",
+            "description": "In honouring this pledge, I will support reforms that increase the transparency of the Canadian parliamentary process and federal civil service, allowing citizens to know what is happening inside their government."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "mainapp.pledge",
+        "fields": {
+            "pledge_text": "Make campaign promises specific and measurable, and report progress on promises and their metrics at least semi-annually.",
+            "created_at": "2008-09-13 00:00:00",
+            "code": "p",
+            "name": "Promises",
+            "description": "<p>In honouring this pledge, I will publish a timeline for achieving my campaign promises, along with specific metrics that can be used to judge whether or not a promise has been kept.  Progress updates on promises will be published at least semi-annually.</p>"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "mainapp.pledge",
+        "fields": {
+            "pledge_text": "Publish the content of my daily schedule, including meetings with lobbyists and special interest groups.",
+            "created_at": "2008-09-13 00:00:00",
+            "code": "s",
+            "name": "Schedule",
+            "description": "In honoring this pledge, I will publish my daily official work schedule on the Internet, within 24 hours of the end of every work day. The schedule must include all matters relating to my role as a Member of Parliament, including all meetings with constituents, other Members, and lobbyists, listed by name. (In rare cases withholding the names of constituents whose privacy must be protected.) The schedule will also include all fundraising events. Events will be listed whether Parliament is in session or not, and whether the I am in Ottawa, traveling, or my district."
+        }
+    },
+    {
+        "pk": 4,
+        "model": "mainapp.pledge",
+        "fields": {
+            "pledge_text": "Support reforms allowing free access to scientific and survey data gathered by government institutions.",
+            "created_at": "2008-09-13 00:00:00",
+            "code": "a",
+            "name": "Open Access",
+            "description": "In honouring this pledge, I will support reforms that abolish access fees for scientific and survey data gathered by government institutions."
+        }
+    },
+    {
+        "pk": 5,
+        "model": "mainapp.pledge",
+        "fields": {
+            "pledge_text": "Support reforms that make it easier for Canadians to obtain government information they have a right to know.",
+            "created_at": "2008-09-13 00:00:00",
+            "code": "d",
+            "name": "Government Data",
+            "description": "In honouring this pledge, I will support reforms that make the Access to Information process faster and more efficient.  In addition, I will support reforms that mandate publishing government information not restricted by citizen privacy issues by default, avoiding the Access to Information process altogether."
+        }
+    }
+]
